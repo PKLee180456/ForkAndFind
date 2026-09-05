@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Fork & Find: a native Kotlin Android restaurant discovery app. Features, Android Studio setup, and project reference.">
+  <title>Fork &amp; Find — App overview</title>
+  <style>
+    :root{color-scheme:light;--ink:#183d35;--muted:#54665e;--paper:#faf8f4;--line:#d8ded4;--gold:#f5ca77}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
+    a{color:inherit;text-underline-offset:4px}a:focus-visible{outline:3px solid #b07918;outline-offset:5px}
+    .page{max-width:1080px;margin:auto;padding:32px 40px}header,footer{display:flex;justify-content:space-between;align-items:center;gap:18px}
+    .brand{font-weight:800;letter-spacing:.18em;font-size:14px}.label{font-size:12px;text-transform:uppercase;letter-spacing:.12em;font-weight:700}
+    header{border-bottom:1px solid var(--line);padding-bottom:22px}header a{font-size:14px}
+    .hero{display:grid;grid-template-columns:1.5fr 1fr;gap:48px;align-items:center;padding:40px 0 30px}
+    h1{font-size:clamp(38px,5.4vw,62px);line-height:1.06;letter-spacing:-.055em;margin:12px 0 20px}h2{font-size:21px;letter-spacing:-.025em;margin:0 0 14px}h3{font-size:15px;margin:0 0 5px}
+    p{margin:0 0 12px}.intro{max-width:530px;color:var(--muted);font-size:17px}.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}.tag{border:1px solid var(--line);border-radius:30px;padding:4px 12px;font-size:12px}
+    .preview{background:#e6ead9;border-radius:24px;padding:24px;transform:rotate(2deg)}.preview .label{color:var(--muted);font-size:10px}
+    .food{font-size:62px;text-align:center;line-height:1.4}.sample{background:white;border-radius:16px;padding:18px}.sample strong{font-size:21px}.sample p{font-size:13px;color:var(--muted);margin:5px 0 0}.rating{float:right;font-size:14px;color:#805610}
+    .notice{background:#eee9dc;border-left:4px solid #b48b3d;padding:12px 16px;border-radius:0 10px 10px 0;font-size:13px;margin-bottom:28px}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:36px}.features{display:grid;grid-template-columns:1fr 1fr;gap:18px}.features p{font-size:13px;color:var(--muted)}
+    ol{padding-left:20px;margin:0}li{padding-left:4px;margin-bottom:8px;font-size:14px}code{font-family:ui-monospace,Consolas,monospace;font-size:.86em;overflow-wrap:anywhere}
+    .technical{margin-top:26px;border-top:1px solid var(--line);padding-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:36px}.technical p{font-size:13px;color:var(--muted)}
+    .command{display:block;background:var(--ink);color:#fff;padding:12px 14px;border-radius:10px;margin:8px 0 12px;white-space:normal}
+    footer{margin-top:24px;padding-top:16px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+    @media(max-width:700px){.page{padding:24px}.hero{grid-template-columns:1fr;gap:20px;padding-top:28px}.preview{transform:none}.grid,.technical{grid-template-columns:1fr;gap:24px}header,footer{align-items:flex-start;flex-wrap:wrap}.features{gap:14px}}
+    @media print{@page{size:A4;margin:12mm}body{font-size:10px;background:white}.page{padding:0;max-width:none}header{padding-bottom:10px}.hero{grid-template-columns:1.5fr 1fr;gap:24px;padding:20px 0}h1{font-size:37px}.intro{font-size:12px}.preview{padding:15px;transform:none}.food{font-size:40px}.sample strong{font-size:16px}.notice{font-size:10px;margin-bottom:18px;padding:9px 12px}.grid,.technical{grid-template-columns:1fr 1fr;gap:24px}h2{font-size:16px;margin-bottom:10px}h3{font-size:12px}.features{gap:12px}.features p,.technical p,li{font-size:10px}li{margin-bottom:6px}.technical{margin-top:16px;padding-top:14px}.tag,footer{font-size:9px}.tags{margin-top:12px}.command{background:#eee;color:#183d35;padding:8px}footer{margin-top:16px;padding-top:10px}section,aside,.preview{break-inside:avoid}}
+  </style>
+</head>
+<body>
+<div class="page">
+  <header><div class="brand">FORK &amp; FIND</div><a href="https://github.com/PKLee180456/ForkAndFind">View project on GitHub ↗</a></header>
+  <main>
+    <section class="hero" aria-labelledby="title">
+      <div><span class="label">Native Android · App overview</span><h1>Good food.<br>Great discoveries.</h1><p class="intro">A restaurant discovery app for exploring a sample Hong Kong collection, narrowing down your next meal, and keeping your favorite finds close.</p><div class="tags"><span class="tag">Kotlin</span><span class="tag">Jetpack Compose</span><span class="tag">Material 3</span><span class="tag">Android 8.0+</span></div></div>
+      <aside class="preview" aria-label="Illustrative restaurant card, not an app screenshot"><div class="label">A taste of the demo collection</div><div class="food" aria-hidden="true">🥟</div><div class="sample"><span class="rating">★ 4.9</span><strong>Little Bamboo</strong><p>Cantonese · Central · $$</p><p>Mushroom &amp; bamboo dumplings</p></div></aside>
+    </section>
+    <aside class="notice"><strong>Demo data, clearly labeled.</strong> All 12 restaurants, ratings, prices, and menu details are fictional. Discovery works offline with no account or API key. Maps opens an external search for real restaurants in the selected neighborhood.</aside>
+    <div class="grid">
+      <section aria-labelledby="features"><h2 id="features">Find your kind of table</h2><div class="features">
+        <div><h3>Search naturally</h3><p>Match multiple words across restaurant names, cuisines, neighborhoods, and specialties.</p></div>
+        <div><h3>Make it your meal</h3><p>Filter by cuisine, maximum budget, and vegetarian options. Sort by rating, price, or name.</p></div>
+        <div><h3>Keep your favorites</h3><p>Save restaurants to a dedicated collection that stays on your device between app launches.</p></div>
+        <div><h3>Explore the details</h3><p>Read descriptions and signature dishes, then discover the surrounding area through Maps.</p></div>
+      </div></section>
+      <section aria-labelledby="setup"><h2 id="setup">Open it in Android Studio</h2><ol>
+        <li>Clone or download the GitHub repository. Open its <code>ForkAndFind</code> subfolder containing <code>settings.gradle.kts</code>.</li>
+        <li>Use Android Studio Meerkat or a newer compatible release, with JDK 17 and Android SDK Platform 35.</li>
+        <li>Let Gradle sync download dependencies. The initial setup needs internet access.</li>
+        <li>Select an Android 8.0 / API 26 or newer emulator or connected device, then run the <strong>app</strong> configuration.</li>
+      </ol></section>
+    </div>
+    <div class="technical">
+      <section aria-labelledby="build"><h2 id="build">Build &amp; verify</h2><p>From the Android project folder on Windows:</p><code class="command">gradlew.bat assembleDebug testDebugUnitTest lintDebug</code><p>macOS/Linux: use <code>sh gradlew</code> with the same tasks. Debug APK: <code>app/build/outputs/apk/debug/app-debug.apk</code>.</p><p>Search unit tests are included. Compilation, lint, and emulator verification were not completed in the creation environment.</p></section>
+      <section aria-labelledby="architecture"><h2 id="architecture">Small, approachable codebase</h2><p><code>MainActivity.kt</code> contains the Compose interface. <code>Restaurant.kt</code> provides the sample catalog and search logic. SharedPreferences stores favorites locally.</p><p>AGP 8.9.2 · Gradle 8.11.1 · Kotlin 2.0.21<br>Compose BOM 2025.04.01 · Target SDK 35</p><p>For live listings, replace the sample catalog with a provider-backed repository and add loading and error states. Current features do not include reservations, live hours, or GPS distances.</p></section>
+    </div>
+  </main>
+  <footer><span>Fork &amp; Find · Project reference · v1.0</span><a href="../ForkAndFind/README.md">Full setup &amp; source documentation ↗</a></footer>
+</div>
+</body>
+</html>
